@@ -34,7 +34,7 @@ router.put(
   },
   saveArticleAndRedirect("edit")
 );
-//npm i method-override to allow button to delete other than get or post
+
 router.delete("/:id", async (req, res) => {
   await Article.findByIdAndDelete(req.params.id);
   res.redirect("/");
